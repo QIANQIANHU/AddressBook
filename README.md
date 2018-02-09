@@ -11,7 +11,7 @@ This webpage will help user to record address information and store that as a li
 ## Setup/Installation Requirements
 
 * Copy repository from GitHub to your computer using Terminal command $ git clone and then run with dotnet run command line on your Terminal;
-* Copy and paste the link(http://5000 ) to your browser.
+* Copy and paste the link(http://localhost:5000) to your browser.
 
 
 ## Technologies Used
