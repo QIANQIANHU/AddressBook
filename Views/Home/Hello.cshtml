@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <title>Home of address book</title>
+  </head>
+  <body class="container">
+    <h1>Welcome to AddressBook</h1>
+    <ul>
+      <li>@Model.GetUserName()</li>
+      <li>@Model.GetPhoneNumber()</li>
+      <li>@Model.GetAddress()</li>
+    </ul>
+  </body>
+</html>
