@@ -37,13 +37,13 @@ namespace AddressBook.Models
     }
   }
 
-  public class ContactList {
-    public list<Contact> contactList;
-
-    void addContact(Contact oneContact) {
-      contactList.add(oneContact);
-    }
-
-    void deleteContact(Contact on
-  }
+  // public class ContactList {
+  //   public list<Contact> contactList;
+  //
+  //   void addContact(Contact oneContact) {
+  //     contactList.add(oneContact);
+  //   }
+  //
+  //   void deleteContact(Contact on
+  // }
 }
