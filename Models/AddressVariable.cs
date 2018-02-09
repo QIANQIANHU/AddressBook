@@ -1,6 +1,6 @@
 namespace AddressBook.Models
 {
-  public class AddressVariable
+  public class Contact
   {
     private string _userName;
     private string _phoneNumber;
@@ -10,6 +10,7 @@ namespace AddressBook.Models
     {
       return _userName;
     }
+
     public void SetUserName(string newUserName)
     {
       _userName = newUserName;
@@ -34,5 +35,15 @@ namespace AddressBook.Models
     {
       _address = newAddress;
     }
+  }
+
+  public class ContactList {
+    public list<Contact> contactList;
+
+    void addContact(Contact oneContact) {
+      contactList.add(oneContact);
+    }
+
+    void deleteContact(Contact on
   }
 }
