@@ -9,10 +9,17 @@
   <body class="container">
     <h1>Welcome to AddressBook</h1>
     <form action="/CreateForm" method="post">
-        <button type='submit' class='btn'>Add address</button>
+      <button type='submit' class='btn'>Add address</button>
     </form>
-    <form class="" action="/ContactList" method="post">
-      <button type='submit' class='btn'>Show list</button>
-    </form>
+    <h1>Your contact list: </h1>
+    <ul>
+      <li>Name: @Model.GetUserName()</li>
+      <li>Phone number: @Model.GetPhoneNumber()</li>
+      <li>address: @Model.GetAddress()</li>
+    </ul>
+
+    <!-- <form class="" action="/ContactList" method="post">
+      <button type='submit' class='btn'>delete</button>
+    </form> -->
   </body>
 </html>

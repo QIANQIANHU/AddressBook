@@ -7,18 +7,12 @@ namespace AddressBook.Controllers
     {
       [Route("/")]
       public ActionResult Index()
-      {
-        return View();
-      }
-
-      [Route("/ContactList")]
-      public ActionResult ContactList()
        {
-         Contact myContact = new Contact();
-         myContact.SetUserName(Request.Query["userName"]);
-         myContact.SetPhoneNumber(Request.Query["phoneNumber"]);
-         myContact.SetAddress(Request.Query["address"]);
-         return View(myContact);
+         ContactVariable myContactvariable = new ContactVariable();
+         myContactvariable.SetUserName(Request.Query["userName"]);
+         myContactvariable.SetPhoneNumber(Request.Query["phoneNumber"]);
+         myContactvariable.SetAddress(Request.Query["address"]);
+         return View(myContactvariable);
       }
 
       [Route("/CreateForm")]
@@ -26,6 +20,5 @@ namespace AddressBook.Controllers
       {
         return View();
       }
-
     }
 }

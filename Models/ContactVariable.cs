@@ -1,6 +1,6 @@
 namespace AddressBook.Models
 {
-  public class Contact
+  public class ContactVariable
   {
     private string _userName;
     private string _phoneNumber;
