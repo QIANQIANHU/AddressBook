@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace AddressBook.Models
 {
   public class ContactVariable
@@ -7,14 +9,15 @@ namespace AddressBook.Models
     private string _address;
     private int _id;
 
-    private static List<ContactVariable> _contacts = new List<ContactVariable>{};
+    private static List<ContactVariable> _contacts = new List<ContactVariable>();
 
     public ContactVariable(string userName, string phoneNumber, string address)
     {
       _userName = userName;
       _phoneNumber = phoneNumber;
       _address = address;
-      _id = _contacts.Count + 1;
+      _contacts.Add(this);
+      _id = _contacts.Count;
     }
 
     public string GetUserName()
@@ -50,15 +53,11 @@ namespace AddressBook.Models
     {
       return _id;
     }
-  }
 
-  // public class ContactList {
-  //   public list<Contact> contactList;
-  //
-  //   void addContact(Contact oneContact) {
-  //     contactList.add(oneContact);
-  //   }
-  //
-  //   void deleteContact(Contact on
-  // }
+    public static List<ContactVariable> GetAll()
+    {
+      return _contacts;
+    }
+
+  }
 }
