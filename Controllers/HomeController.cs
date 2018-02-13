@@ -29,13 +29,12 @@ namespace AddressBook.Controllers
         return View("Index", ContactVariable.GetAll());
       }
 
-      // [HttpPost("/delete")]
-      // public ActionResult DeleteAll()
-      // {
-      //   //clear the list of all of the objects
-      //   //see a confirmation page, with link to adding a new object
-      //   //ADDLOGIC
-      // }
+      [HttpPost("/delete")]
+      public ActionResult DeleteAll()
+      {
+        ContactVariable.ClearAll();
+        return View();
+      }
 
       //Also want a details route and page
 

@@ -58,6 +58,10 @@ namespace AddressBook.Models
     {
       return _contacts;
     }
+    public static void ClearAll()
+    {
+      _contacts.Clear();
+    }
 
   }
 }

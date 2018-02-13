@@ -8,12 +8,18 @@
   </head>
   <body class="container">
     <h1>Welcome to AddressBook</h1>
-    <a href="/create-form">Add contact</a>
+    <hr>
+    <form action="/create-form">
+      <button type="submit" name="button">Add contact</button>
+    </form>
     <ul>
       @foreach(var contact in Model)
       {
         <li>@contact.GetUserName()</li>
       }
     </ul>
+    <form action="/delete" method="post">
+      <button type="submit" name="button">Clear All Contacts</button>
+    </form>
   </body>
 </html>
