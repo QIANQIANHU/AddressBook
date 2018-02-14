@@ -50,5 +50,16 @@ namespace AddressBook.Controllers
          // Todo: if no matching id, return an error view
       }
 
+    //   [HttpGet("/contacts/{id}")]
+    //   public ActionResult ListIndividualContact(int id)
+    //  {
+    //      Dictionary<string, object> model = new Dictionary<string, object>();
+    //      Category selectedCategory = Category.Find(id);
+    //      List<Item> categoryItems = selectedCategory.GetItems();
+    //      model.Add("category", selectedCategory);
+    //      model.Add("items", categoryItems);
+    //      return View(model);
+    //  }
+
     }
 }
