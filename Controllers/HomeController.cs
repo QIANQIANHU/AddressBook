@@ -37,6 +37,18 @@ namespace AddressBook.Controllers
       }
 
       //Also want a details route and page
+      //[HttpGet("/contacts/{id}")] // it's called path parameter
+      [HttpGet("/contacts/{id}")]
+      public ActionResult ListIndividualContact(int id) {
+         List<ContactVariable> contactList = ContactVariable.GetAll();
+         for (int i = 0; i < contactList.Count; i++) {
+           if (id == contactList[i].GetId()) {
+             return View("ContactDetails", contactList[i]);
+           }
+         }
+         return View("Index");
+         // Todo: if no matching id, return an error view
+      }
 
     }
 }
