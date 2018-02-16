@@ -15,7 +15,7 @@
     <ul>
       @foreach(var contact in Model)
       {
-        <li>@contact.GetUserName()</li>
+        <li><a href="/contacts/@contact.GetId()">@contact.GetUserName()</a></li>
       }
     </ul>
     <form action="/delete" method="post">
